@@ -3,8 +3,6 @@ name: CI/CD Tienda Perritos - Frontend
 on:
   push:
     branches: [ "main" ]
-    paths:
-      - "frontend/**"
 
 jobs:
   build-push-deploy-frontend:
@@ -23,4 +21,4 @@ jobs:
         with:
           context: ./frontend
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/petstore:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/petstore-front:latest

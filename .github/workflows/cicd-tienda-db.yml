@@ -3,8 +3,7 @@ name: CI/CD Tienda Perritos - DB
 on:
   push:
     branches: [ "main" ]
-    paths:
-      - "db/**"
+  
 
 jobs:
   build-push-deploy-db:
@@ -22,4 +21,4 @@ jobs:
         with:
           context: ./db
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/petstore:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/petstore-db:latest
